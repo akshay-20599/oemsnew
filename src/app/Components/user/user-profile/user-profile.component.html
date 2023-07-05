@@ -1,0 +1,44 @@
+<mat-card class="mt-4 ">
+    <mat-card-content class="text-center">
+        <div class="container">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png " style="height: 150px; width: 150px;"
+                alt="">
+            <h2>{{userData.firstname}} {{userData.lastname}}r</h2>
+            </div>
+
+            <div class="container ">
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <table class="table table-bordered text-center">
+                         <thead>
+                            <tr>
+                                <th>User Name</th>
+                                <th>{{userData.username}}</th>
+                            </tr>
+                            <tr>
+                                <th>User Id</th>
+                                <th>{{userData.id}}</th>
+                            </tr>
+                            <tr>
+                                <th>User Role</th>
+                                <th>{{userData.authorities[0].authority}}</th>
+                            </tr>
+                            <tr>
+                                <th>User status</th>
+                                <th>{{userData.enabled}}</th>
+                            </tr>
+                            <tr>
+                                <th>User Phone No</th>
+                                <th>{{userData.phone}}</th>
+                            </tr>
+                         </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <button class="text-center mx-2" mat-raised-button color="primary">Update</button>
+                <button class="text-center " mat-raised-button color="warm">Share</button>
+            </div>
+    </mat-card-content>
+</mat-card>

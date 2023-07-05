@@ -1,0 +1,45 @@
+<mat-card class="mt-4">
+    <h1 class="text-center">Add New Quiz</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="row" [formGroup]="addQuiz" (submit)="addQuizdata()">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input matInput type="text" placeholder="Enter Title here" name="title" formControlName="title">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Discription</mat-label>
+                        <textarea matInput type="text" placeholder="Enter Title here" name="description"
+                            formControlName="description"></textarea>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col-6">
+                        <mat-label>Max Marks </mat-label>
+                        <input matInput type="number" placeholder="Max Marks" name="maxMarks" formControlName="maxMarks">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="col-6">
+                        <mat-label>No Of Question</mat-label>
+                        <input matInput type="number" placeholder="Number of question" 
+                            formControlName="numberOfQuestions">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Select Category </mat-label>
+                        <mat-select formControlName="category_id">
+                            <mat-option *ngFor="let category of getCategoryData" [value]="category.category_id"
+                                >{{category.title}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-slide-toggle formControlName="active">Active</mat-slide-toggle>
+
+                    <div class="text-center mb-3 mt-2">
+                        <button class="btn btn-primary">Add Quizz</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</mat-card>

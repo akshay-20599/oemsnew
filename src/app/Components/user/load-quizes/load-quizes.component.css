@@ -1,0 +1,9 @@
+.quizIcon {
+   
+    background-image: url("src\assets\images\quiz-banner-pop-art-style-question-comic-speech-bubble-template_578506-345.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+button{
+    font-size: 12px;
+}

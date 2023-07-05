@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+            <mat-card class="mt-4">
+                <mat-card-title>
+                    <h2 class="text-center text-danger">!! Read the instructions Of this page carefully !!</h2>
+                </mat-card-title>
+                <mat-card-content>
+                    <h1>{{quizes.title}}</h1>
+                    <P>{{quizes.description}}</P>
+                    <mat-divider></mat-divider>
+                    <h2>Important Instruction</h2>
+                   
+                    <marquee behavior="" direction="up" scrollamount="3">
+                    <ul class="text-danger" >
+                    <li>this quiz is only for exam purpse</li>
+                    <li>read carefully all Question and give answer</li>
+                    <li>You hava to submit quiz with in 6 Minute</li>
+                    <li>you can attempt the quiz with in 6 Minute</li>
+                    <li>There are <b>{{quizes.numberOfQuestions}} </b> Question in this quiz</li>
+                    <li>Each Question carries <b>{{quizes.maxMarks/quizes.numberOfQuestions}}</b> marks No negative marking for wrong one</li>
+                    <li>All Question is of Mcq type</li>
+                   
+                    </ul>
+                </marquee>
+                <mat-divider></mat-divider>
+                    <h2>Attempting Quiz</h2>
+                    
+                   <marquee behavior="" direction="up" scrollamount="3">
+                    <ul class="text-danger">
+                        <li>Click start Quiz button to start the quiz</li>
+                        <li>The time will start the moment you Click the Start Test button</li>
+                        <li>You can not resume this quiz, if interrupted due to any reason:</li>
+                        <li>Scroll down to move to next Question</li>
+                        <li>Click on submit quiz button of complation of the quiz</li>
+                        <li>Report of the test is automaticall generated i the form of PDF copy</li>
+                    </ul>
+                   </marquee>
+                </mat-card-content>
+                <div class="container">
+                  <button class="btn btn-primary mt-3 mb-3" (click)="startExam()">Start Exam</button>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

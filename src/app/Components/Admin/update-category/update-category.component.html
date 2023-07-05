@@ -1,0 +1,32 @@
+<mat-card class="text-center mt-4">
+    <h1 class="mt-4">Update Category</h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form class="row" [formGroup]="updateCategory" (submit)="updateCategoryData()">
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Category-Id</mat-label>
+                        <input matInput type="text" placeholder="Enter Title here" name="category_id"
+                            formControlName="category_id">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Title</mat-label>
+                        <input matInput type="text" placeholder="Enter Title here" name="title" formControlName="title">
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Discription</mat-label>
+                        <textarea matInput type="text" placeholder="Enter Category Discription" name="description"
+                            formControlName="description"></textarea>
+                    </mat-form-field>
+                    <div>
+                        <button class="btn btn-primary mb-3" type="submit">Update category</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</mat-card>

@@ -1,0 +1,24 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+a{
+    font-size: 20px;
+}
+
+@media(max-width:450px){
+
+    a{
+        font-size: 15px;
+    }
+    .example-spacer{
+        margin: 0 ; 
+        padding: 0;
+        flex: 0.2 0.2  auto;
+    }
+    span{
+        font-size: 15px;
+    }
+    a{
+        margin: 0;
+    }
+}

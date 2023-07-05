@@ -1,0 +1,45 @@
+<div class="container">
+    <form class="row g-3" [formGroup]="signup" (submit)="signupData()">
+        <h1 class="mt-5 text-center bg-primary text-light">Sign_up Here</h1>
+        <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">First name</label>
+            <input type="text" class="form-control" placeholder="Enter Firstname" formControlName="firstname"
+                name="firstname" required>
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Last name</label>
+            <input type="text" class="form-control" placeholder="Enter Lastname" formControlName="lastname"
+                name="lastname" required>
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <input type="text" class="form-control" placeholder="Username" formControlName="username" name="username"
+                required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder="Password" formControlName="password"
+                name="password" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Email" formControlName="email" name="email"
+                required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="validationCustomUsername" class="form-label">Contact No</label>
+            <input type="number" class="form-control" placeholder="Contact No" formControlName="phone"
+                name="phone" required>
+        </div>
+
+
+        <div class="col-12 text-center">
+            <button class="btn btn-primary text-center" type="submit">Register</button>
+            <button class="btn btn-danger text-center mx-3" type="reset">reset</button>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,26 @@
+<H1 class="text-center">All Quizzes</H1>
+<mat-card class="mt-4" *ngFor="let quiz of getAllQuizz">
+    <mat-card-header>
+        <div mat-card-avatar class="quizIcon"></div>
+        <mat-card-title>{{quiz.title | uppercase}}</mat-card-title>
+        <mat-card-subtitle>{{quiz.description | uppercase}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        Add quistion from here
+    </mat-card-content>
+
+    <div class="container mt-3">
+        <button mat-raised-button color="primary" class="mb-4 mx-3"
+        [routerLink]="['/admin-dash/veiw-question/'+quiz.quiz_id + '/' + quiz.title]">Question</button>
+        <button mat-stroked-button class="mb-4 mx-3">Max marks:{{quiz.maxMarks}}</button>
+        <button mat-stroked-button class="mb-4 mx-3">number of quistion:{{quiz.numberOfQuestions}}</button>
+        <button [routerLink]="['/admin-dash/update-quiz/'+quiz.quiz_id]" mat-raised-button color="primary"
+            class="mb-4 mx-3">Update</button>
+        <button mat-raised-button color="primary" class="mb-4 mx-3">Attempts</button>
+        <button mat-raised-button color="warn" class="mb-4 mx-3" (click)="deletQuizeById(quiz.quiz_id)">Delete</button>
+    </div>
+</mat-card>
+<div class="text-center">
+    <button mat-raised-button color="primary" class="mt-4" routerLink="/admin-dash/Add-quiz">Add Quiz</button>
+</div>
